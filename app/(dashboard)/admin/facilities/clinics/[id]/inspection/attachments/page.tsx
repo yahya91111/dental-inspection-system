@@ -172,7 +172,7 @@ export default function AttachmentsPage() {
                           اختيار ملف
                         </button>
                         <input
-                          ref={el => fileInputRefs.current[attachment.id] = el}
+                          ref={(el) => { fileInputRefs.current[attachment.id] = el }}
                           type="file"
                           accept="image/*"
                           onChange={(e) => {
