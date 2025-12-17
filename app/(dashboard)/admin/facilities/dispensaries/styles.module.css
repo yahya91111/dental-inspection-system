@@ -1,0 +1,303 @@
+/* Private Dispensaries Page - Neumorphism Green Design */
+
+.page {
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - Soft Green */
+.header {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.06),
+    0 4px 8px rgba(5, 150, 105, 0.08),
+    0 8px 16px rgba(5, 150, 105, 0.1),
+    0 12px 24px rgba(5, 150, 105, 0.12);
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* Back Button - Glass Container */
+.backBtn {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  color: #059669;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 2rem;
+  padding: 0.75rem;
+  width: 50px;
+  height: 50px;
+  box-shadow:
+    0 4px 8px rgba(5, 150, 105, 0.1),
+    0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.backBtn:hover {
+  transform: translateX(4px) scale(1.05);
+  background: rgba(255, 255, 255, 0.8);
+  color: #047857;
+  box-shadow:
+    0 6px 12px rgba(5, 150, 105, 0.15),
+    0 3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Add Button - Glass Container */
+.addBtn {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  color: #059669;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  padding: 0.75rem;
+  width: 50px;
+  height: 50px;
+  box-shadow:
+    0 4px 8px rgba(5, 150, 105, 0.1),
+    0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.addBtn:hover {
+  transform: scale(1.08) rotate(90deg);
+  background: rgba(255, 255, 255, 0.8);
+  color: #047857;
+  box-shadow:
+    0 6px 12px rgba(5, 150, 105, 0.15),
+    0 3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Search Container */
+.searchContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0 2rem;
+}
+
+/* Search Input - Neumorphism */
+.searchInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #059669;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 18px;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  outline: none;
+  text-align: right;
+  direction: rtl;
+}
+
+.searchInput::placeholder {
+  color: #6b7280;
+  font-weight: 500;
+  text-align: right;
+  direction: rtl;
+}
+
+.searchInput:focus {
+  box-shadow:
+    inset 6px 6px 12px rgba(5, 150, 105, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 1);
+}
+
+/* Container */
+.container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #e8f5f0;
+  padding: 2.5rem 2rem;
+}
+
+/* Dispensaries Grid */
+.dispensariesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Dispensary Card - Neumorphism */
+.dispensaryCard {
+  border-radius: 20px;
+  padding: 2rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dispensaryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.dispensaryCard:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.dispensaryCard:hover::before {
+  opacity: 1;
+}
+
+/* Dispensary Name */
+.dispensaryName {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.dispensaryCard:hover .dispensaryName {
+  color: #047857;
+  transform: translateY(-2px);
+}
+
+/* No Results */
+.noResults {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dispensariesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 0 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .backBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.75rem;
+    left: 1.5rem;
+  }
+
+  .addBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.75rem;
+    right: 1.5rem;
+  }
+
+  .searchContainer {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .dispensariesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dispensaryCard {
+    padding: 1.75rem;
+    min-height: 100px;
+  }
+
+  .dispensaryName {
+    font-size: 1.25rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .dispensaryCard:hover {
+    transform: translateY(0) scale(1);
+  }
+
+  .dispensaryCard:active {
+    transform: scale(0.98);
+  }
+
+  .dispensaryCard:hover .dispensaryName {
+    transform: none;
+  }
+}

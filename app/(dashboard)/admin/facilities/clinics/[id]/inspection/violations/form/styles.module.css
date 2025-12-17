@@ -1,0 +1,641 @@
+/* Violations Page - Neumorphism Green Design */
+
+.page {
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - Soft Green */
+.header {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.06),
+    0 4px 8px rgba(5, 150, 105, 0.08),
+    0 8px 16px rgba(5, 150, 105, 0.1),
+    0 12px 24px rgba(5, 150, 105, 0.12);
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* Back Button - Glass Container */
+.backBtn {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  color: #059669;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 2rem;
+  padding: 0.75rem;
+  width: 50px;
+  height: 50px;
+  box-shadow:
+    0 4px 8px rgba(5, 150, 105, 0.1),
+    0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.backBtn:hover {
+  transform: translateX(4px) scale(1.05);
+  background: rgba(255, 255, 255, 0.8);
+  color: #047857;
+  box-shadow:
+    0 6px 12px rgba(5, 150, 105, 0.15),
+    0 3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Container */
+.container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #e8f5f0;
+  padding: 2.5rem 2rem;
+}
+
+/* Form Card - Neumorphism */
+.formCard {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+/* Section */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(5, 150, 105, 0.1);
+  text-align: right;
+}
+
+/* Form Elements */
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 0.95rem;
+  color: #374151;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    inset 3px 3px 6px rgba(5, 150, 105, 0.12),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+  text-align: right;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* Address Grid */
+.addressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+/* Violations List */
+.violationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.violationItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #e8f5f0;
+  box-shadow:
+    inset 3px 3px 6px rgba(5, 150, 105, 0.1),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.violationNumber {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+  min-width: 30px;
+  text-align: right;
+}
+
+.violationInput {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+    inset 2px 2px 4px rgba(5, 150, 105, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  text-align: right;
+  font-family: inherit;
+}
+
+.violationInput:focus {
+  outline: none;
+  box-shadow:
+    inset 3px 3px 6px rgba(5, 150, 105, 0.15),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.violationInput::placeholder {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.removeViolationBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ef4444;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    2px 2px 4px rgba(5, 150, 105, 0.12),
+    -2px -2px 4px rgba(255, 255, 255, 0.85);
+}
+
+.removeViolationBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  transform: scale(1.1);
+}
+
+.addViolationBtn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #059669;
+  background: #e8f5f0;
+  border: 2px dashed rgba(5, 150, 105, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addViolationBtn:hover {
+  background: rgba(5, 150, 105, 0.05);
+  border-color: rgba(5, 150, 105, 0.5);
+  transform: translateY(-2px);
+}
+
+.addViolationBtn:active {
+  transform: translateY(0);
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #374151;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  text-align: right;
+  direction: rtl;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.textarea:focus {
+  outline: none;
+  box-shadow:
+    inset 6px 6px 12px rgba(5, 150, 105, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 1);
+}
+
+.textarea::placeholder {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* Save Button */
+.saveBtn {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 12px rgba(5, 150, 105, 0.3),
+    -2px -2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    6px 6px 16px rgba(5, 150, 105, 0.4),
+    -3px -3px 10px rgba(255, 255, 255, 0.6);
+}
+
+.saveBtn:active {
+  transform: translateY(0);
+  box-shadow:
+    2px 2px 8px rgba(5, 150, 105, 0.3),
+    -1px -1px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 0 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.35rem;
+  }
+
+  .backBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.75rem;
+    left: 1.5rem;
+  }
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+
+  .formCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .addressGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .saveBtn {
+    font-size: 1.1rem;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* Signature Styles */
+.signatureContainer {
+  margin-top: 0.75rem;
+}
+
+.signaturePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #e8f5f0;
+  box-shadow:
+    inset 3px 3px 6px rgba(5, 150, 105, 0.1),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.signatureImage {
+  max-width: 300px;
+  max-height: 150px;
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  border-radius: 8px;
+  background: white;
+}
+
+.removeSignatureBtn {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    3px 3px 6px rgba(239, 68, 68, 0.3),
+    -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.removeSignatureBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    4px 4px 8px rgba(239, 68, 68, 0.4),
+    -3px -3px 6px rgba(255, 255, 255, 0.6);
+}
+
+.addSignatureBtn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #059669;
+  background: #e8f5f0;
+  border: 2px dashed rgba(5, 150, 105, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addSignatureBtn:hover {
+  background: rgba(5, 150, 105, 0.05);
+  border-color: rgba(5, 150, 105, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Signature Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: #e8f5f0;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.signatureCanvas {
+  width: 100%;
+  border: 2px solid rgba(5, 150, 105, 0.2);
+  border-radius: 12px;
+  background: white;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.clearBtn {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(239, 68, 68, 0.3),
+    -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.clearBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    5px 5px 10px rgba(239, 68, 68, 0.4),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+.cancelBtn {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(5, 150, 105, 0.15),
+    -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.cancelBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    5px 5px 10px rgba(5, 150, 105, 0.2),
+    -5px -5px 10px rgba(255, 255, 255, 1);
+}
+
+.saveBtn {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(5, 150, 105, 0.3),
+    -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    5px 5px 10px rgba(5, 150, 105, 0.4),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Save Button Container */
+.saveButtonContainer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(5, 150, 105, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 12px rgba(5, 150, 105, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  min-width: 200px;
+}
+
+.saveButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 16px rgba(5, 150, 105, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.saveButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Section Hint */
+.sectionHint {
+  font-size: 0.9375rem;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.08);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  border-left: 3px solid #059669;
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .addViolationBtn:hover {
+    transform: translateY(0);
+  }
+
+  .saveBtn:hover {
+    transform: translateY(0);
+  }
+
+  .saveBtn:active {
+    transform: scale(0.98);
+  }
+
+  .saveButton:hover:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .saveButton:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+}

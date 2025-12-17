@@ -1,0 +1,426 @@
+/* Design Preview Page - 2025 Healthcare Design Showcase */
+
+.previewPage {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.2);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.backBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-4px);
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Container */
+.container {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-y: visible;
+}
+
+/* Design Sections */
+.designSection {
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.designSection:last-of-type {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0 0 0.75rem 0;
+  background: linear-gradient(135deg, #22c55e 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sectionDesc {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 24px;
+  background: #f9fafb;
+}
+
+/* ============================================
+   1. GLOW DESIGN (Current)
+   ============================================ */
+.glowCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(0);
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.02),
+    0 8px 16px rgba(0, 0, 0, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(5, 150, 105, 0.08),
+    0 0 60px rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.glowCard::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #22c55e 0%, #10b981 50%, #34d399 100%);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.3;
+  filter: blur(20px);
+}
+
+.glowCard:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 0 1px rgba(34, 197, 94, 0.2),
+    0 4px 8px rgba(34, 197, 94, 0.08),
+    0 12px 24px rgba(34, 197, 94, 0.12),
+    0 24px 48px rgba(34, 197, 94, 0.16),
+    0 48px 96px rgba(5, 150, 105, 0.2),
+    0 0 80px rgba(34, 197, 94, 0.3);
+}
+
+.glowCard:hover::after {
+  opacity: 0.5;
+}
+
+/* ============================================
+   2. GLASS MORPHISM
+   ============================================ */
+.glassBackground {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.glassBackground::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.glassBackground::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.glassCard {
+  position: relative;
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.glassCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.glassCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.glassCard:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   3. NEUMORPHISM
+   ============================================ */
+.neuBackground {
+  background: #e8f5f0;
+  padding: 3rem 2rem;
+}
+
+.neuCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.neuCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.neuCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.neuCard:hover::before {
+  opacity: 1;
+}
+
+.neuCardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #059669;
+  margin: 0;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   4. MINIMAL CLEAN
+   ============================================ */
+.minimalCard {
+  border-radius: 16px;
+  padding: 2.5rem;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.minimalCard:hover {
+  transform: translateY(-4px);
+  border-color: #22c55e;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.12);
+}
+
+.minimalCardTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+  letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+.minimalCard:hover .minimalCardTitle {
+  color: #22c55e;
+}
+
+/* ============================================
+   SHARED CARD TITLE
+   ============================================ */
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #22c55e 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   FINAL NOTE
+   ============================================ */
+.finalNote {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: 24px;
+  margin-top: 3rem;
+}
+
+.finalNote p {
+  font-size: 1.25rem;
+  color: #059669;
+  margin: 0 0 2rem 0;
+  font-weight: 600;
+}
+
+.selectBtn {
+  background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.3);
+}
+
+.selectBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .designSection {
+    margin-bottom: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardsGrid {
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .glowCard,
+  .glassCard,
+  .neuCard,
+  .minimalCard {
+    padding: 2rem;
+  }
+
+  .cardTitle,
+  .neuCardTitle,
+  .minimalCardTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .glowCard:hover,
+  .glassCard:hover,
+  .neuCard:hover,
+  .minimalCard:hover {
+    transform: translateY(0);
+  }
+}

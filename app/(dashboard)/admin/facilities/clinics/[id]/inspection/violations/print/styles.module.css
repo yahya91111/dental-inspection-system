@@ -1,0 +1,376 @@
+/* Loading Container */
+.loadingContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Toolbar - Hidden when printing */
+.noPrint {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.toolbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.backButton,
+.printButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backButton {
+  background: #6c757d;
+  color: white;
+}
+
+.backButton:hover {
+  background: #5a6268;
+}
+
+.printButton {
+  background: #059669;
+  color: white;
+}
+
+.printButton:hover {
+  background: #047857;
+}
+
+/* Document */
+.document {
+  width: 21cm;
+  min-height: 29.7cm;
+  margin: 0 auto;
+  background: white;
+  padding: 1.5cm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #000;
+}
+
+.headerLeft,
+.headerRight {
+  flex: 1;
+  text-align: center;
+}
+
+.headerTextEn {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.headerTextAr {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+  font-weight: 600;
+}
+
+.headerCenter {
+  flex: 0 0 auto;
+  padding: 0 2rem;
+}
+
+.emblem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content */
+.content {
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  text-decoration: underline;
+}
+
+.legalReference {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.legalReference p {
+  margin: 0.5rem 0;
+}
+
+.legalText {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.inputLine {
+  display: inline-block;
+  min-width: 120px;
+  border-bottom: 1px solid #000;
+  padding: 0 0.5rem 2px;
+  text-align: center;
+}
+
+/* Inspectors Table */
+.inspectorsTable {
+  margin: 1.5rem 0;
+}
+
+.inspectorsTable table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
+.inspectorsTable th,
+.inspectorsTable td {
+  border: 1px solid #000;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.inspectorsTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.tableCell {
+  padding: 0.5rem;
+}
+
+.stampBox,
+.signBox {
+  min-height: 50px;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  padding: 0.25rem;
+  margin: 0.25rem auto;
+}
+
+/* Section Text */
+.sectionText {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+/* Facility Details */
+.facilityDetails {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.detailRowMulti {
+  display: flex;
+  gap: 1rem;
+  margin: 0.75rem 0;
+}
+
+.detailField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.detailLabel {
+  font-weight: 600;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.detailLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.5rem 2px;
+  min-height: 24px;
+}
+
+/* Violations List */
+.violationsList {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.violationItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.75rem 0;
+}
+
+.violationNumber {
+  font-weight: 600;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.violationLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.5rem 2px;
+  min-height: 24px;
+}
+
+/* Confrontation Section */
+.confrontSection {
+  margin: 1.5rem 0;
+}
+
+.confrontRow {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.confrontLabel {
+  font-weight: 600;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.confrontLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.5rem 2px;
+  min-height: 24px;
+}
+
+/* Statement Section */
+.statementSection {
+  margin: 1.5rem 0;
+}
+
+.statementText {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.statementLines {
+  border: 1px solid #000;
+  min-height: 120px;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.statementLine {
+  line-height: 1.8;
+}
+
+/* Signature Section */
+.signatureSection {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.signatureLabel {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.signatureBox {
+  border: 1px solid #000;
+  min-height: 60px;
+  max-width: 200px;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+/* Page Number */
+.pageNumber {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Print Styles */
+@media print {
+  .noPrint {
+    display: none !important;
+  }
+
+  .document {
+    width: 100%;
+    margin: 0;
+    padding: 1.5cm;
+    box-shadow: none;
+    page-break-after: avoid;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .document {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .detailRowMulti {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

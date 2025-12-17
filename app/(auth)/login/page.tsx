@@ -32,6 +32,9 @@ export default function LoginPage() {
         throw new Error(data.error || "فشل تسجيل الدخول")
       }
 
+      // Store user data in localStorage
+      localStorage.setItem("user", JSON.stringify(data.user))
+
       // Redirect based on role
       if (data.user.role === "admin") {
         router.push("/admin")

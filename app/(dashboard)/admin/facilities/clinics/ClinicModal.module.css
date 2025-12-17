@@ -1,0 +1,304 @@
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Content */
+.modalContent {
+  background: #e8f5f0;
+  border-radius: 24px;
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 0.95),
+    0 0 40px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  border-bottom: 2px solid rgba(5, 150, 105, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  text-align: right;
+}
+
+.closeBtn {
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #ef4444;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow:
+    3px 3px 6px rgba(239, 68, 68, 0.15),
+    -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.closeBtn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  transform: scale(1.08);
+  box-shadow:
+    4px 4px 8px rgba(239, 68, 68, 0.2),
+    -2px -2px 6px rgba(255, 255, 255, 0.6);
+}
+
+.closeBtn:active {
+  transform: scale(0.95);
+}
+
+/* Form */
+.form {
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.75rem;
+}
+
+.formGroup:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 0.75rem;
+  text-align: right;
+}
+
+.required {
+  color: #ef4444;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.optional {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-right: 0.25rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #374151;
+  background: #e8f5f0;
+  border: none;
+  border-radius: 14px;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  outline: none;
+  text-align: right;
+  direction: rtl;
+}
+
+.input[type="tel"] {
+  direction: ltr;
+  text-align: left;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.input:focus {
+  box-shadow:
+    inset 5px 5px 10px rgba(5, 150, 105, 0.18),
+    inset -5px -5px 10px rgba(255, 255, 255, 1);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(5, 150, 105, 0.1);
+}
+
+.cancelBtn {
+  padding: 0.875rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(107, 114, 128, 0.25),
+    -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.cancelBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4b5563 0%, #374151 100%);
+  box-shadow:
+    5px 5px 10px rgba(107, 114, 128, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+.cancelBtn:active {
+  transform: translateY(0);
+}
+
+.saveBtn {
+  padding: 0.875rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(5, 150, 105, 0.25),
+    -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  box-shadow:
+    5px 5px 10px rgba(5, 150, 105, 0.3),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+.saveBtn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modalContent {
+    max-width: calc(100% - 2rem);
+    max-height: 95vh;
+  }
+
+  .modalHeader {
+    padding: 1.75rem 1.75rem 1.25rem 1.75rem;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .closeBtn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.75rem;
+  }
+
+  .form {
+    padding: 1.75rem 1.75rem 2rem 1.75rem;
+  }
+
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+
+  .formGroup:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  .label {
+    font-size: 1rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .input {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+
+  .cancelBtn,
+  .saveBtn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .closeBtn:hover,
+  .cancelBtn:hover,
+  .saveBtn:hover {
+    transform: none;
+  }
+
+  .closeBtn:active {
+    transform: scale(0.95);
+  }
+
+  .cancelBtn:active,
+  .saveBtn:active {
+    transform: scale(0.98);
+  }
+}

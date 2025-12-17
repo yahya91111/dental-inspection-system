@@ -1,0 +1,275 @@
+/* Professional Admin Dashboard - 2025 Healthcare Design Trends */
+
+.dashboard {
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - Soft Green */
+.header {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.06),
+    0 4px 8px rgba(5, 150, 105, 0.08),
+    0 8px 16px rgba(5, 150, 105, 0.1),
+    0 12px 24px rgba(5, 150, 105, 0.12);
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.adminName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  text-align: center;
+}
+
+/* Profile Button */
+.profileBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.profileIcon {
+  font-size: 1.75rem;
+  filter: brightness(0) invert(1);
+}
+
+.container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #e8f5f0;
+  padding: 2rem;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Health Facilities Card - Neumorphism */
+.facilityCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.facilityCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.facilityCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.facilityCard:hover::before {
+  opacity: 1;
+}
+
+/* Members Card - Neumorphism */
+.membersCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.membersCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.membersCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.membersCard:hover::before {
+  opacity: 1;
+}
+
+/* Tasks Card - Neumorphism */
+.tasksCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tasksCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tasksCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.tasksCard:hover::before {
+  opacity: 1;
+}
+
+/* Statistics Card - Neumorphism */
+.statisticsCard {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.statisticsCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.statisticsCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.statisticsCard:hover::before {
+  opacity: 1;
+}
+
+/* Modern Typography - Neumorphism */
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #059669;
+  margin: 0;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .facilityCard {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .facilityCard:hover {
+    transform: translateY(-8px) scale(1.005);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .facilityCard:hover,
+  .membersCard:hover,
+  .tasksCard:hover,
+  .statisticsCard:hover {
+    transform: translateY(0);
+  }
+}

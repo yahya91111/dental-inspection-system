@@ -1,0 +1,648 @@
+/* ============================================
+   SHARED COMPONENTS - Neumorphism Green Design
+   نظام التفتيش الصحي - المكونات المشتركة
+   ============================================ */
+
+/* ============================================
+   COLORS - الألوان الأساسية
+   ============================================ */
+:root {
+  --primary-green: #059669;
+  --light-green: #10b981;
+  --lighter-green: #34d399;
+  --soft-green: #d1fae5;
+  --softer-green: #a7f3d0;
+  --bg-green: #e8f5f0;
+  --white: #ffffff;
+  --gray-light: #f9fafb;
+  --gray: #6b7280;
+  --gray-dark: #1f2937;
+}
+
+/* ============================================
+   BUTTONS - الأزرار
+   ============================================ */
+
+/* Primary Button - زر أساسي */
+.primaryBtn {
+  background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 8px rgba(5, 150, 105, 0.2),
+    0 8px 16px rgba(5, 150, 105, 0.15);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 12px rgba(5, 150, 105, 0.25),
+    0 12px 24px rgba(5, 150, 105, 0.2);
+}
+
+.primaryBtn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.15),
+    0 4px 8px rgba(5, 150, 105, 0.1);
+}
+
+/* Secondary Button - زر ثانوي (Neumorphism) */
+.secondaryBtn {
+  background: var(--bg-green);
+  color: var(--primary-green);
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow:
+    6px 6px 12px rgba(5, 150, 105, 0.15),
+    -6px -6px 12px rgba(255, 255, 255, 0.9);
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.2),
+    -8px -8px 16px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.secondaryBtn:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* Back Button - زر الرجوع */
+.backBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+
+/* Add Button - زر الإضافة */
+.addBtn {
+  background: linear-gradient(135deg, var(--lighter-green) 0%, var(--light-green) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 1.75rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 12px rgba(5, 150, 105, 0.25),
+    0 8px 24px rgba(5, 150, 105, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addBtn:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow:
+    0 6px 16px rgba(5, 150, 105, 0.3),
+    0 12px 32px rgba(5, 150, 105, 0.25);
+}
+
+/* Icon Button - زر الأيقونة */
+.iconBtn {
+  background: var(--bg-green);
+  border: none;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    4px 4px 8px rgba(5, 150, 105, 0.15),
+    -4px -4px 8px rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  font-size: 1.25rem;
+}
+
+.iconBtn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    6px 6px 12px rgba(5, 150, 105, 0.2),
+    -6px -6px 12px rgba(255, 255, 255, 1);
+}
+
+/* ============================================
+   CARDS - الكروت
+   ============================================ */
+
+/* Neumorphism Card */
+.card {
+  border-radius: 24px;
+  padding: 2.5rem;
+  background: var(--bg-green);
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Clickable Card */
+.clickableCard {
+  cursor: pointer;
+}
+
+/* Flat Card (No hover effects) */
+.flatCard {
+  border-radius: 24px;
+  padding: 2rem;
+  background: var(--bg-green);
+  box-shadow:
+    6px 6px 12px rgba(5, 150, 105, 0.12),
+    -6px -6px 12px rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   MODALS - النوافذ المنبثقة
+   ============================================ */
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(5, 150, 105, 0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+/* Modal Container */
+.modal {
+  background: var(--bg-green);
+  border-radius: 32px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    0 0 60px rgba(5, 150, 105, 0.1);
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(5, 150, 105, 0.1);
+}
+
+.modalTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalClose:hover {
+  background: rgba(5, 150, 105, 0.1);
+  color: var(--primary-green);
+  transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modalBody {
+  margin-bottom: 2rem;
+}
+
+/* Modal Footer */
+.modalFooter {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(5, 150, 105, 0.1);
+}
+
+/* ============================================
+   INPUTS - حقول الإدخال
+   ============================================ */
+
+/* Text Input */
+.input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 16px;
+  background: var(--bg-green);
+  color: var(--gray-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow:
+    inset 6px 6px 12px rgba(5, 150, 105, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.input::placeholder {
+  color: var(--gray);
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 16px;
+  background: var(--bg-green);
+  color: var(--gray-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.textarea:focus {
+  outline: none;
+  box-shadow:
+    inset 6px 6px 12px rgba(5, 150, 105, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Select Dropdown */
+.select {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 16px;
+  background: var(--bg-green);
+  color: var(--gray-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow:
+    inset 4px 4px 8px rgba(5, 150, 105, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  box-shadow:
+    inset 6px 6px 12px rgba(5, 150, 105, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 1),
+    0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+/* Label */
+.label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+/* Form Group */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   ALERTS & NOTIFICATIONS - التنبيهات
+   ============================================ */
+
+/* Success Alert */
+.alertSuccess {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border: 2px solid var(--light-green);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  color: var(--primary-green);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+}
+
+/* Error Alert */
+.alertError {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border: 2px solid #ef4444;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  color: #dc2626;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+/* Warning Alert */
+.alertWarning {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  color: #d97706;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+/* Info Alert */
+.alertInfo {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border: 2px solid #3b82f6;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  color: #2563eb;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+/* ============================================
+   HEADERS - رؤوس الصفحات
+   ============================================ */
+
+/* Soft Green Header */
+.headerSoft {
+  background: linear-gradient(135deg, var(--soft-green) 0%, var(--softer-green) 100%);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.06),
+    0 4px 8px rgba(5, 150, 105, 0.08),
+    0 8px 16px rgba(5, 150, 105, 0.1),
+    0 12px 24px rgba(5, 150, 105, 0.12);
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+/* Gradient Header */
+.headerGradient {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 50%, var(--lighter-green) 100%);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.2);
+  flex-shrink: 0;
+}
+
+/* Header Content */
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Page Title */
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.pageTitleWhite {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+/* ============================================
+   LISTS - القوائم
+   ============================================ */
+
+/* List Container */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* List Item */
+.listItem {
+  background: var(--bg-green);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow:
+    6px 6px 12px rgba(5, 150, 105, 0.12),
+    -6px -6px 12px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  transform: translateX(-4px);
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   BADGES - الشارات
+   ============================================ */
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.badgeSuccess {
+  background: linear-gradient(135deg, var(--lighter-green) 0%, var(--light-green) 100%);
+  color: var(--white);
+}
+
+.badgeWarning {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: var(--white);
+}
+
+.badgeError {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  color: var(--white);
+}
+
+.badgeInfo {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  color: var(--white);
+}
+
+/* ============================================
+   LOADING - التحميل
+   ============================================ */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--bg-green);
+  border-top-color: var(--primary-green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 20px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover,
+  .listItem:hover,
+  .iconBtn:hover,
+  .addBtn:hover {
+    transform: none;
+  }
+}

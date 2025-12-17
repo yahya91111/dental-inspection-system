@@ -1,0 +1,281 @@
+/* Health Facilities Categories Page - Neumorphism Green Design */
+
+.page {
+  height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - Soft Green */
+.header {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding-top: calc(env(safe-area-inset-top) + 1.5rem);
+  padding-bottom: 1.5rem;
+  box-shadow:
+    0 2px 4px rgba(5, 150, 105, 0.06),
+    0 4px 8px rgba(5, 150, 105, 0.08),
+    0 8px 16px rgba(5, 150, 105, 0.1),
+    0 12px 24px rgba(5, 150, 105, 0.12);
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+.headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.pageTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* Back Button - Glass Container */
+.backBtn {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  color: #059669;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 2rem;
+  padding: 0.75rem;
+  width: 50px;
+  height: 50px;
+  box-shadow:
+    0 4px 8px rgba(5, 150, 105, 0.1),
+    0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.backBtn:hover {
+  transform: translateX(4px) scale(1.05);
+  background: rgba(255, 255, 255, 0.8);
+  color: #047857;
+  box-shadow:
+    0 6px 12px rgba(5, 150, 105, 0.15),
+    0 3px 6px rgba(255, 255, 255, 0.6);
+}
+
+/* Container */
+.container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #e8f5f0;
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Facility Category Card - Neumorphism */
+.card {
+  border-radius: 24px;
+  padding: 2rem 1.75rem;
+  background: #e8f5f0;
+  box-shadow:
+    8px 8px 16px rgba(5, 150, 105, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    12px 12px 24px rgba(5, 150, 105, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 1),
+    inset 2px 2px 4px rgba(5, 150, 105, 0.05);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Card Icon */
+.cardIcon {
+  font-size: 3.75rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(5, 150, 105, 0.2));
+  transition: all 0.4s ease;
+}
+
+.card:hover .cardIcon {
+  transform: scale(1.08) translateY(-4px);
+  filter: drop-shadow(0 8px 16px rgba(5, 150, 105, 0.3));
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #059669;
+  margin: 0;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  line-height: 1.2;
+}
+
+.card:hover .cardTitle {
+  color: #047857;
+  transform: translateY(-2px);
+}
+
+/* Card Description */
+.cardDesc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.75rem 1.5rem;
+    min-height: 220px;
+  }
+
+  .cardIcon {
+    font-size: 3.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    padding: 0 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+    padding-left: 60px;
+  }
+
+  .backBtn {
+    font-size: 1.75rem;
+    left: 1.5rem;
+  }
+
+  .container {
+    padding: 3rem 1.5rem 2rem 1.5rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 22px;
+    min-height: 200px;
+  }
+
+  .cardIcon {
+    font-size: 3.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: translateY(0) scale(1);
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+
+  .card:hover .cardIcon {
+    transform: none;
+  }
+
+  .card:hover .cardTitle {
+    transform: none;
+  }
+}

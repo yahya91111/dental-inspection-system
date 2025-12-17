@@ -1,0 +1,1654 @@
+/* Print Preview Page - Official Document Styles */
+
+.page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 20px;
+  direction: rtl;
+}
+
+/* Print/Back buttons container */
+.noPrint {
+  max-width: 210mm;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.printBtn,
+.backBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.printBtn {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: white;
+}
+
+.printBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.backBtn {
+  background: white;
+  color: #047857;
+  border: 2px solid #047857;
+}
+
+.backBtn:hover {
+  background: #f0fdf4;
+}
+
+/* Official Document Container */
+.document {
+  max-width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 20px;
+  background: white;
+  padding: 10mm 12mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+/* Official Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 8px;
+}
+
+.headerLeft,
+.headerRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.headerLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.headerRight {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.headerTextEn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Times New Roman', serif;
+}
+
+.headerTextAr {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+}
+
+.headerCenter {
+  flex: 0 0 auto;
+  padding: 0 20px;
+}
+
+.emblem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emblemCircle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.emblemCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Title Section */
+.titleSection {
+  margin-bottom: 6px;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 20px;
+}
+
+.dateField,
+.clinicNameField {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+
+.fieldValue {
+  font-size: 11px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding: 2px 8px;
+  min-width: 110px;
+}
+
+.clinicNameField .fieldValue {
+  min-width: 200px;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', serif;
+  letter-spacing: 0.3px;
+  padding: 4px 0;
+  border: 2px solid #000;
+  background: #f5f5f5;
+}
+
+/* Tables Container */
+.tablesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.tableWrapper {
+  width: 100%;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  font-family: 'Arial', sans-serif;
+}
+
+.table thead tr th {
+  background: #e5e5e5;
+  border: 1px solid #000;
+  padding: 3px 2px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+
+.tableHeader {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.subHeader {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 3px 2px;
+}
+
+.table tbody tr td {
+  border: 1px solid #000;
+  padding: 2px 4px;
+  font-size: 9px;
+  color: #000;
+  line-height: 1.3;
+}
+
+.sectionDivider {
+  background: #f5f5f5;
+  height: 2px;
+  padding: 0;
+}
+
+.notesCell {
+  min-height: 22px;
+  font-size: 9px;
+  padding: 4px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.smallText {
+  font-size: 8px;
+  color: #555;
+  margin-top: 1px;
+}
+
+.categoryCell {
+  font-weight: 700;
+  background: #f5f5f5;
+  text-align: left;
+  width: 50%;
+}
+
+.itemCell {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 9px;
+}
+
+.subItemCell {
+  text-align: left;
+  padding-left: 25px;
+  font-size: 9px;
+  font-style: italic;
+}
+
+.checkCell {
+  text-align: center;
+  width: 15%;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.checkmark {
+  color: #000;
+  font-weight: 900;
+}
+
+.roomsHeaderCell {
+  width: 20%;
+  font-size: 9px;
+  padding: 3px 2px;
+}
+
+.roomCheckCell {
+  text-align: center;
+  width: 20%;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+/* Bottom Tables */
+.bottomTablesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.bottomTableWrapper {
+  width: 100%;
+}
+
+.bottomTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+}
+
+.bottomTable thead tr th {
+  background: #e5e5e5;
+  border: 1px solid #000;
+  padding: 3px 2px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+
+.bottomTable tbody tr td {
+  border: 1px solid #000;
+  padding: 2px 4px;
+  font-size: 9px;
+  color: #000;
+  line-height: 1.3;
+}
+
+/* Staff Section */
+.staffSection {
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 6px;
+  padding: 4px 0;
+  background: #e5e5e5;
+  border: 2px solid #000;
+}
+
+.staffItemCell {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 4px;
+}
+
+/* Clinics Count */
+.clinicsCount {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border: 1px solid #000;
+  background: #f5f5f5;
+}
+
+.clinicsCount .fieldLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+}
+
+.clinicsCount .fieldValue {
+  font-size: 11px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding: 2px 12px;
+  min-width: 60px;
+  text-align: center;
+  background: white;
+}
+
+/* Divider Line */
+.dividerLine {
+  width: 100%;
+  height: 2px;
+  background: #000;
+  margin: 10px 0;
+}
+
+/* Implant Options */
+.implantOptions {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: #f9f9f9;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
+}
+
+.checkboxRow:last-child {
+  margin-bottom: 0;
+}
+
+.checkboxRow input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #000;
+}
+
+.checkboxRow label {
+  cursor: pointer;
+}
+
+.checkboxInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 12px;
+}
+
+.checkboxInline input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+}
+
+.checkboxInline label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Implant Section */
+.implantSection {
+  margin-bottom: 8px;
+}
+
+/* Comments Section */
+.commentsSection {
+  margin-bottom: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentsTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+}
+
+.commentsArea {
+  flex: 1;
+  min-height: 600px;
+  border: 2px solid #000;
+  background: white;
+  padding: 12px;
+}
+
+/* Page Number */
+.pageNumber {
+  text-align: center;
+  font-size: 10px;
+  color: #000;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Page 5 - Official Letter */
+.page5Content {
+  padding: 6px 16px;
+  direction: rtl;
+}
+
+.page5Recipient {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+}
+
+.page5Respected {
+  text-decoration: underline;
+}
+
+.page5Greeting {
+  margin-bottom: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #000;
+  text-align: right;
+}
+
+.page5Body {
+  margin-bottom: 6px;
+}
+
+.page5Text {
+  font-size: 10px;
+  font-weight: 600;
+  color: #000;
+  text-align: right;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.page5FacilityLine {
+  border-bottom: 1px solid #000;
+  min-height: 16px;
+  margin-bottom: 6px;
+  font-size: 10px;
+  padding: 2px 4px;
+  text-align: center;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page5Request {
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.page5RequestText {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.page5ClosingText {
+  font-size: 9px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.3;
+}
+
+/* Facility Info Section */
+.page5FacilityInfo {
+  margin-bottom: 4px;
+  margin-top: 6px;
+}
+
+.page5Details {
+  margin-bottom: 4px;
+}
+
+.page5InfoRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.page5InfoRowDouble {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.page5InfoRowHalf {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: right;
+}
+
+.page5InfoLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+  min-width: 150px;
+}
+
+.page5InfoLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  min-height: 14px;
+  background: white;
+  font-size: 9px;
+  padding: 1px 4px;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+}
+
+/* Visit Info Section */
+.page5VisitInfo {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.page5VisitField {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page5VisitLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.page5VisitBox {
+  width: 80px;
+  height: 16px;
+  border: 1px solid #000;
+  background: white;
+  font-size: 9px;
+  padding: 1px 4px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: rtl;
+}
+
+/* Committee Members Section */
+.page5CommitteeSection {
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+.page5HeadSection,
+.page5ContactSection,
+.page5StampSection {
+  margin-bottom: 4px;
+}
+
+.page5SectionTitle {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  margin-bottom: 3px;
+  padding: 1px 0;
+  background: transparent;
+  border: none;
+}
+
+.page5MembersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin-bottom: 3px;
+}
+
+.page5MemberCard,
+.page5HeadCard,
+.page5ContactCard {
+  border: 1px solid #000;
+  padding: 3px;
+  background: white;
+}
+
+.page5HeadCard,
+.page5ContactCard {
+  width: 100%;
+}
+
+.page5MemberField {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 3px;
+}
+
+.page5FieldLabel {
+  font-size: 8px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.page5FieldLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  min-height: 12px;
+  font-size: 9px;
+  padding: 1px 4px;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+}
+
+.page5SignatureRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+}
+
+.page5SignatureBox {
+  border: 1px solid #000;
+  min-height: 28px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2px;
+  background: white;
+}
+
+.page5BoxLabel {
+  font-size: 7px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* Facility Stamp Section */
+.page5StampBox {
+  border: 2px solid #000;
+  min-height: 80px;
+  max-width: 300px;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page 6 - Violation Report (محضر إثبات مخالفة) */
+.page6Content {
+  padding: 6px 12px;
+  direction: rtl;
+}
+
+.page6Title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  border: 2px solid #000;
+  background: #f5f5f5;
+}
+
+.page6LegalText {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.page6LegalText p {
+  font-size: 9px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Inspectors Table */
+.page6InspectorsTable {
+  margin-bottom: 6px;
+}
+
+.page6Table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+}
+
+.page6TableHeader {
+  background: #e5e5e5;
+  border: 1px solid #000;
+  padding: 4px 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+}
+
+.page6TableCell {
+  border: 1px solid #000;
+  padding: 3px;
+  text-align: center;
+}
+
+.page6InputLine {
+  min-height: 22px;
+  border-bottom: 1px solid #000;
+  background: white;
+  font-size: 9px;
+  color: #000;
+  text-align: center;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page6StampBox,
+.page6SignBox {
+  min-height: 28px;
+  background: white;
+}
+
+/* Section Text */
+.page6SectionText {
+  font-size: 10px;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+/* Facility Details */
+.page6FacilityDetails {
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid #000;
+  background: #f9f9f9;
+}
+
+.page6DetailRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.page6DetailRowMulti {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.page6DetailField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.page6DetailLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.page6DetailLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  min-height: 16px;
+  background: white;
+  font-size: 9px;
+  color: #000;
+  text-align: right;
+  direction: rtl;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Violations List */
+.page6ViolationsList {
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.page6ViolationItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.page6ViolationItem:last-child {
+  margin-bottom: 0;
+}
+
+.page6ViolationNumber {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  min-width: 16px;
+}
+
+.page6ViolationLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  min-height: 16px;
+  font-size: 9px;
+  color: #000;
+  text-align: right;
+  direction: rtl;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Confrontation Section */
+.page6ConfrontSection {
+  margin-bottom: 6px;
+}
+
+.page6ConfrontRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.page6ConfrontLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;
+}
+
+.page6ConfrontLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  min-height: 16px;
+  background: white;
+  font-size: 9px;
+  color: #000;
+  text-align: right;
+  direction: rtl;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* Statement Section */
+.page6StatementSection {
+  margin-bottom: 8px;
+}
+
+.page6StatementText {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.page6StatementLines {
+  padding: 5px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.page6StatementLine {
+  border-bottom: 1px solid #000;
+  min-height: 18px;
+  margin-bottom: 4px;
+  font-size: 9px;
+  color: #000;
+  text-align: right;
+  direction: rtl;
+  padding: 4px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.page6StatementLine:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+/* Violator Signature */
+.page6SignatureSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.page6SignatureLabel {
+  font-size: 9px;
+  font-weight: 700;
+  color: #000;
+}
+
+.page6SignatureBox {
+  width: 150px;
+  height: 45px;
+  border: 2px solid #000;
+  background: white;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .page {
+    background: white;
+    padding: 0;
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .document {
+    max-width: 100%;
+    height: 297mm;
+    margin: 0;
+    padding: 10mm 12mm;
+    box-shadow: none;
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .header {
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .emblemCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mainTitle {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .table,
+  .bottomTable {
+    page-break-inside: avoid;
+  }
+
+  .tablesContainer {
+    page-break-inside: avoid;
+  }
+
+  .bottomTablesContainer {
+    page-break-inside: avoid;
+  }
+
+  .document :global(*) {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .page {
+    padding: 10px;
+  }
+
+  .document {
+    padding: 10mm;
+  }
+
+  .tablesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomTablesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .headerLeft,
+  .headerRight {
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerCenter {
+    padding: 10px 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* Notes Page Styles */
+/* ═══════════════════════════════════════════════════════════ */
+
+.notesSection {
+  margin-top: 20px;
+  padding: 15px;
+  direction: rtl;
+}
+
+.noteBlock {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1.5px solid #333;
+  border-radius: 6px;
+  background: #fafafa;
+  page-break-inside: avoid;
+}
+
+.noteTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #666;
+}
+
+.noteContent {
+  font-size: 10px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: right;
+}
+
+.additionalNotesSection {
+  margin-top: 20px;
+  padding: 12px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+.additionalNoteItem {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 3px solid #059669;
+  background: white;
+}
+
+.additionalNoteItem:last-child {
+  margin-bottom: 0;
+}
+
+.additionalNoteTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: #059669;
+  margin-bottom: 6px;
+}
+
+.additionalNoteContent {
+  font-size: 9px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: right;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.emptyState p {
+  margin: 0;
+}
+
+/* Print Optimizations for Notes */
+@media print {
+  .notesSection {
+    page-break-inside: avoid;
+  }
+
+  .noteBlock {
+    page-break-inside: avoid;
+  }
+
+  .additionalNotesSection {
+    page-break-inside: avoid;
+  }
+
+  .additionalNoteItem {
+    page-break-inside: avoid;
+  }
+}
+
+/* Content (for Page 6 - Violations) */
+.content {
+  padding: 0 0.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-decoration: underline;
+}
+
+.legalReference {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0.4rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.legalReference p {
+  margin: 0.2rem 0;
+}
+
+.legalText {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0.4rem 0;
+  text-align: justify;
+}
+
+.inputLine {
+  display: inline-block;
+  min-width: 80px;
+  border-bottom: 1px solid #000;
+  padding: 0 0.3rem 2px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Inspectors Table */
+.inspectorsTable {
+  margin: 0.5rem 0;
+}
+
+/* Inspector name boxes in table - full border */
+.inspectorsTable .inputLine {
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 0.3rem 0.5rem;
+  background-color: #fff;
+  min-width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.inspectorsTable table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  table-layout: fixed;
+}
+
+/* Column widths */
+.inspectorsTable th:nth-child(1),
+.inspectorsTable td:nth-child(1) {
+  width: 20%;
+}
+
+.inspectorsTable th:nth-child(2),
+.inspectorsTable td:nth-child(2) {
+  width: 40%;
+}
+
+.inspectorsTable th:nth-child(3),
+.inspectorsTable td:nth-child(3) {
+  width: 40%;
+}
+
+.inspectorsTable th,
+.inspectorsTable td {
+  border: 1px solid #000;
+  padding: 1.6rem 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  min-height: 80px;
+}
+
+.inspectorsTable th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.tableCell {
+  padding: 1.6rem 2rem;
+}
+
+/* Name cells in inspector table - larger padding */
+.inspectorsTable tbody td:first-child {
+  padding: 1.6rem 2rem;
+  min-height: 80px;
+  font-weight: 500;
+}
+
+.stampBox,
+.signBox {
+  min-height: 45px;
+  min-width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  padding: 0.3rem;
+  margin: 0.2rem auto;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Section Text */
+.sectionText {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Facility Details */
+.facilityDetails {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.detailRowMulti {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+.detailField {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.detailLabel {
+  font-weight: 600;
+  margin-left: 0.3rem;
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.detailLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.3rem 1px;
+  min-height: 18px;
+  font-size: 0.85rem;
+}
+
+/* Violations List */
+.violationsList {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.violationItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.3rem 0;
+}
+
+.violationNumber {
+  font-weight: 600;
+  margin-left: 0.3rem;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.violationLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.3rem 1px;
+  min-height: 18px;
+  font-size: 0.85rem;
+}
+
+/* Confrontation Section */
+.confrontSection {
+  margin: 0.5rem 0;
+}
+
+.confrontRow {
+  display: flex;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.confrontLabel {
+  font-weight: 600;
+  margin-left: 0.3rem;
+  white-space: nowrap;
+  font-size: 0.85rem;
+}
+
+.confrontLine {
+  flex: 1;
+  border-bottom: 1px solid #000;
+  padding: 0 0.3rem 1px;
+  min-height: 18px;
+  font-size: 0.85rem;
+}
+
+/* Statement Section */
+.statementSection {
+  margin: 0.5rem 0;
+}
+
+.statementText {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.statementLines {
+  border: 1px solid #000;
+  min-height: 60px;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.statementLine {
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+/* Signature Section */
+.signatureSection {
+  margin: 0.75rem 0 0.5rem;
+  text-align: center;
+}
+
+.signatureLabel {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.signatureBox {
+  border: 2px solid #000;
+  min-height: 50px;
+  max-width: 160px;
+  margin: 0.4rem auto;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Print Styles for Violations Page (Page 6) */
+@media print {
+  .document {
+    width: 100%;
+    max-width: 210mm;
+    min-height: auto;
+    margin: 0;
+    padding: 15mm 12mm;
+    box-shadow: none;
+    page-break-after: always;
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .content {
+    padding: 0 0.3rem;
+  }
+
+  .header {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+  }
+
+  .legalReference {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0.3rem 0;
+  }
+
+  .legalText {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin: 0.3rem 0;
+  }
+
+  .inspectorsTable {
+    margin: 0.4rem 0;
+  }
+
+  .inspectorsTable th,
+  .inspectorsTable td {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .inspectorsTable .inputLine {
+    border: 2px solid #000 !important;
+    border-radius: 3px;
+    padding: 0.25rem 0.4rem;
+    background-color: #fff;
+    min-width: 90px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .stampBox,
+  .signBox {
+    min-height: 35px;
+    min-width: 60px;
+    border: 2px solid #000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .sectionText {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+    line-height: 1.3;
+  }
+
+  .facilityDetails {
+    margin: 0.4rem 0;
+    padding: 0.4rem;
+  }
+
+  .detailRow {
+    margin: 0.3rem 0;
+  }
+
+  .detailRowMulti {
+    margin: 0.3rem 0;
+    gap: 0.4rem;
+  }
+
+  .detailLabel,
+  .detailLine {
+    font-size: 0.8rem;
+  }
+
+  .violationsList {
+    margin: 0.4rem 0;
+    padding: 0.4rem;
+  }
+
+  .violationItem {
+    margin: 0.25rem 0;
+  }
+
+  .violationNumber,
+  .violationLine {
+    font-size: 0.8rem;
+  }
+
+  .confrontSection {
+    margin: 0.4rem 0;
+  }
+
+  .confrontRow {
+    margin: 0.3rem 0;
+  }
+
+  .confrontLabel,
+  .confrontLine {
+    font-size: 0.8rem;
+  }
+
+  .statementSection {
+    margin: 0.4rem 0;
+  }
+
+  .statementText {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .statementLines {
+    min-height: 50px;
+    padding: 0.4rem;
+  }
+
+  .statementLine {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .signatureSection {
+    margin: 0.6rem 0 0.4rem;
+  }
+
+  .signatureLabel {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .signatureBox {
+    min-height: 40px;
+    max-width: 140px;
+    border: 2px solid #000 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
