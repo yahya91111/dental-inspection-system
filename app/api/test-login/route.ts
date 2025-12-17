@@ -94,7 +94,7 @@ export async function POST(request: Request) {
 
     debug.step6_password_result = {
       is_valid: isPasswordValid,
-      bcrypt_version: bcrypt.getRounds ? 'bcryptjs' : 'unknown'
+      bcrypt_library: 'bcryptjs'
     }
 
     if (!isPasswordValid) {
