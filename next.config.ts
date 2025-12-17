@@ -21,6 +21,7 @@ const nextConfig: NextConfig = {
 const isDev = process.env.NODE_ENV === 'development'
 
 export default isDev ? nextConfig : (async () => {
+  // @ts-expect-error - next-pwa doesn't have TypeScript types
   const withPWA = (await import('next-pwa')).default
   return withPWA({
     dest: 'public',

@@ -21,7 +21,7 @@ export function useInspectionSync<T extends Record<string, any>>(
   options: UseInspectionSyncOptions
 ) {
   const { visitId, userId, userName, isDataLoaded } = options
-  const syncTimeoutRef = useRef<NodeJS.Timeout>()
+  const syncTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const lastSyncedDataRef = useRef<string>('')
 
   // Debounced function للحفظ في database

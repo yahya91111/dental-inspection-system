@@ -822,7 +822,7 @@ export default function SignaturesPage() {
                   )}
                 </div>
                 <input
-                  ref={el => stampInputRefs.current['inspector1Stamp'] = el}
+                  ref={(el) => { stampInputRefs.current['inspector1Stamp'] = el }}
                   type="file"
                   accept="image/*"
                   onChange={(e) => {
@@ -881,7 +881,7 @@ export default function SignaturesPage() {
                   )}
                 </div>
                 <input
-                  ref={el => stampInputRefs.current['inspector2Stamp'] = el}
+                  ref={(el) => { stampInputRefs.current['inspector2Stamp'] = el }}
                   type="file"
                   accept="image/*"
                   onChange={(e) => {
@@ -940,7 +940,7 @@ export default function SignaturesPage() {
                   )}
                 </div>
                 <input
-                  ref={el => stampInputRefs.current['inspector3Stamp'] = el}
+                  ref={(el) => { stampInputRefs.current['inspector3Stamp'] = el }}
                   type="file"
                   accept="image/*"
                   onChange={(e) => {
@@ -999,7 +999,7 @@ export default function SignaturesPage() {
                   )}
                 </div>
                 <input
-                  ref={el => stampInputRefs.current['doctorStamp'] = el}
+                  ref={(el) => { stampInputRefs.current['doctorStamp'] = el }}
                   type="file"
                   accept="image/*"
                   onChange={(e) => {
@@ -1043,7 +1043,7 @@ export default function SignaturesPage() {
                 )}
               </div>
               <input
-                ref={el => stampInputRefs.current['clinicStamp'] = el}
+                ref={(el) => { stampInputRefs.current['clinicStamp'] = el }}
                 type="file"
                 accept="image/*"
                 onChange={(e) => {
@@ -1101,7 +1101,7 @@ export default function SignaturesPage() {
                   )}
                 </div>
                 <input
-                  ref={el => stampInputRefs.current['committeeHeadStamp'] = el}
+                  ref={(el) => { stampInputRefs.current['committeeHeadStamp'] = el }}
                   type="file"
                   accept="image/*"
                   onChange={(e) => {

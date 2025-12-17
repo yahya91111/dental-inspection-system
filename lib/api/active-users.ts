@@ -274,16 +274,13 @@ export class PresenceManager {
     window.addEventListener('beforeunload', () => {
       // استخدام navigator.sendBeacon للإرسال الموثوق عند المغادرة
       const supabase = createClient()
-      supabase
+      void supabase
         .from('active_users')
         .delete()
         .eq('visit_id', this.visitId)
         .eq('user_id', this.userId)
         .then(() => {
-          // تم الحذف بنجاح
-        })
-        .catch(() => {
-          // فشل الحذف - سيتم التنظيف تلقائياً بعد 10 دقائق
+          // تم الحذف بنجاح - وإذا فشل سيتم التنظيف تلقائياً بعد 10 دقائق
         })
     })
   }

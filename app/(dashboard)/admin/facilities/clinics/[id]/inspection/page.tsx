@@ -302,7 +302,6 @@ export default function InspectionPage() {
             inspector_1_name: data.inspector1,
             inspector_2_name: data.inspector2,
             inspector_3_name: data.inspector3,
-            committee_head_name: data.committeeHead,
             contact_person: data.contactPerson
           },
           userIdParam,

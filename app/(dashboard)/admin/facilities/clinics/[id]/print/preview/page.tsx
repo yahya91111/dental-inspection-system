@@ -1379,7 +1379,7 @@ export default function PrintPreviewPage() {
               </tr>
             </thead>
             <tbody>
-              {inspectionData.implantDoctors.map((doctor, index) => (
+              {inspectionData.implantDoctors.map((doctor: any, index: number) => (
                 <tr key={index}>
                   <td className={styles.checkCell}>.{index + 1}</td>
                   <td className={styles.itemCell}>{doctor.name}</td>
@@ -1592,7 +1592,7 @@ export default function PrintPreviewPage() {
             </div>
             <div className={styles.page5InfoRow}>
               <span className={styles.page5InfoLabel}>العنوان:</span>
-              <div className={styles.page5InfoLine}>{clinic?.location || ''}</div>
+              <div className={styles.page5InfoLine}>{clinic?.address || ''}</div>
             </div>
             <div className={styles.page5InfoRowDouble}>
               <div className={styles.page5InfoRowHalf}>
@@ -1710,10 +1710,6 @@ export default function PrintPreviewPage() {
           <div className={styles.page5HeadSection}>
             <h3 className={styles.page5SectionTitle}>رئيس لجنة التفتيش</h3>
             <div className={styles.page5HeadCard}>
-              <div className={styles.page5MemberField}>
-                <span className={styles.page5FieldLabel}>الاسم:</span>
-                <div className={styles.page5FieldLine}>{inspection?.committee_head_name || ''}</div>
-              </div>
               <div className={styles.page5SignatureRow}>
                 <div className={styles.page5SignatureBox}>
                   <span className={styles.page5BoxLabel}>الختم</span>

@@ -42,9 +42,9 @@ export default function ClinicsPage() {
         {
           id: 'temp-' + Date.now(),
           name: newClinic.name,
-          address: newClinic.address || null,
-          phone: newClinic.phone || null,
-          location_url: null,
+          address: newClinic.address || undefined,
+          phone: newClinic.phone || undefined,
+          location_url: undefined,
           created_at: new Date().toISOString(),
           updated_at: new Date().toISOString(),
         },
